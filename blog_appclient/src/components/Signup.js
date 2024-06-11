@@ -37,8 +37,8 @@ function Signup() {
 
   return (
     <div style={{height:"100%"}} className='m-5 p-5' >
-        <div className="row mx-auto card shadow-lg m-5 " style={{width:"400px"}}>
-            <div className="col p-2" >    
+        <div className="row mx-auto card shadow-lg m-5 border-0 " style={{ width:"450px",height:"450",background:'transparent',backdropFilter: 'blur(20px)',borderBottomLeftRadius: '200px',borderBottomRightRadius: '50px',borderTopLeftRadius: '90px',borderTopRightRadius: '70px'}}>
+            <div className="col p-4 px-5" >    
             <h1 className='text-center m-3 '>Signup</h1>
             {err.length!=0 && <p className='text-danger text-center m-2'>{err}</p>}
             <form className=' w-100  text-dark p-3 text-center' onSubmit={handleSubmit(submit)}>
@@ -73,12 +73,14 @@ function Signup() {
                 {errors.username?.type==='required' && <p className='text-danger  m-2'>Password Required</p>}
 
             </div>
+            <div className="d-flex justify-content-end">
             <button className='btn btn-success' type="submit">Register</button>
+            </div>
         </form>
-        <p className='fs-6 px-3 text-center'>Already Registered!
+        {/* <p className='fs-6 px-3 text-center'>Already Registered!
             <Link to='/signin' className='px-1 link-success'>Login</Link>
             here
-        </p>
+        </p> */}
         </div>
     </div>
     </div>

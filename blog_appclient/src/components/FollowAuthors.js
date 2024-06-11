@@ -63,7 +63,7 @@ function FollowAuthors() {
                                             }
                                             {
                                                 (follower.followStatus === false && follower.username === currentUser.username) &&
-                                                <button className='btn btn-info' onClick={() => updateFollowStatus(obj)}>Follow</button>
+                                                <button className='btn btn-success' onClick={() => updateFollowStatus(obj)}>Follow</button>
                                             }
                                         </div>
                                     ))
@@ -71,7 +71,7 @@ function FollowAuthors() {
                                 {
                                     // Render the follow button if followers array is null or does not include the currentUser
                                     (!obj.followers || obj.followers.every(follower => follower.username !== currentUser.username)) &&
-                                    <button className='btn btn-info' onClick={() => updateFollowStatus(obj)}>Follow</button>
+                                    <button className='btn btn-success' onClick={() => updateFollowStatus(obj)}>Follow</button>
                                 }
                             </div>
                         </div>

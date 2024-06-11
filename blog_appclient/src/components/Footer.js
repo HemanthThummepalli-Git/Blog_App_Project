@@ -7,10 +7,13 @@ import { FaSnapchatGhost } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 function Footer() {
   return (
-    <div>
+    <div style={{
+      background: 'transparent',
+      backdropFilter: 'blur(30px)'
+    }}>
       <hr className='m-2'/>
     <footer class="footer">
-    <div className='text-white container'>
+    <div className='text-black container'>
       <div class="row">
         <div class="col-md-4">
           <h5>HEMANTH THUMMEPALLI</h5>
@@ -35,15 +38,15 @@ function Footer() {
         <div class="col-md-4 text-center">
           <div className='d-flex gap-1 justify-content-center allign-items-center'>
           <img className="rounded-3"src='https://i.pinimg.com/736x/c7/8f/cd/c78fcd874b7245671c234f4196d5e59b.jpg' width={'30px'} height={'30px'}></img>
-          <h4>BLOGGER</h4>
+          <h4 className='text-white'>BLOGGER</h4>
           </div>
-          <p>Blogging is passion</p>
+          <p className='text-white'>Blogging is passion</p>
           <a href="#"className='text-success btn btn-link'>Give to blog</a>
         </div>
       </div>
       </div>
       <hr/>
-      <div className=" d-flex justify-content-between container text-white">
+      <div className=" d-flex justify-content-between container text-black">
         <div>
           <p>© Hemanth Thummepalli</p>
         </div>

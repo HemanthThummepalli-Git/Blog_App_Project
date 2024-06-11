@@ -42,7 +42,7 @@ function ArticlesByAuthor() {
 
   return (
     <div className='container m-4 d-block m-auto'>
-    <h1 className='text-center text-white m-3'>{currentUser.username}'s articles</h1>
+    <h1 className='text-center text-dark m-3'>{currentUser.username}'s articles</h1>
     <div className='mt-5 g-4 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row '>
         {
         articlesList.map(articleObj=><div className="col" key={articleObj.id}>
@@ -55,7 +55,7 @@ function ArticlesByAuthor() {
                             articleObj.Content.substring(0,80)+" ...."
                         }
                     </p>
-                    <button className='btn btn-info px-4 m-auto d-block' onClick={()=>getArticleContentByAuthor(articleObj)}><MdReadMore className='fs-4'/> Read More</button>
+                    <button className='btn btn-success px-4 m-auto d-block' onClick={()=>getArticleContentByAuthor(articleObj)}><MdReadMore className='fs-4'/> Read More</button>
                 </div>
                 <div className="card-footer d-flex justify-content-between">
                     <small className="text-body-secondary">

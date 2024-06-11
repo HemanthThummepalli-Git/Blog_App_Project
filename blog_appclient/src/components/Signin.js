@@ -25,12 +25,14 @@ function Signin() {
     })
 
   return (
- <div style={{height:"100%"}} className='m-5 p-5'>
-        <div className="row m-5 mx-auto " style={{width:'400px'}}>
-            <div className="col card shadow-lg p-2" >    
+ <div style={{height:"100%"}} className='m-5 p-5' >
+        <div className="row m-5 mx-auto " style={{width:'450px'}}>
+            <div className="col card shadow-lg p-4 px-5 border-0 rounded-lg" style={{ background:'transparent',backdropFilter: 'blur(50px)',borderBottomLeftRadius: '200px',borderBottomRightRadius: '50px',borderTopLeftRadius: '90px',borderTopRightRadius: '70px'}}>    
+        
             <h1 className='text-center m-3'>Signin</h1>
+            
             {errStatus==true && <p className='text-danger m-2 text-center'>{errmsg}</p>}
-            <form className='w-100 text-dark mx-auto d-block p-3 text-center ' onSubmit={handleSubmit(submit)}>
+            <form  className='w-100 text-dark mx-auto d-block p-3 text-center ' onSubmit={handleSubmit(submit)}>
             <div className="mb-3">
             <div className="form-check form-check-inline m-0 p-0">
                                 <input className="form-check-input mx-2" type="radio" name="usertype" value={"User"} {...register('usertype',{required:true})}/>
@@ -55,12 +57,14 @@ function Signin() {
             {errors.password?.type==='required' && <p className='text-danger m-2'>Password Required</p>}
         </div>
 
-        <button className='btn btn-success'type='submit'><IoMdLogIn /> Login</button>
+        <div className="d-flex justify-content-end">
+        <button className='btn btn-success 'type='submit'><IoMdLogIn /> Login</button>
+      </div>
         </form>
-        <p className='fs-6 px-3 text-center '>New User! 
+        {/* <p className='fs-6 px-3 text-center '>New User! 
             <Link to='/signup' className='px-1 link-success'>Register</Link>
             here
-        </p>
+        </p> */}
             </div>
         </div>
 </div>

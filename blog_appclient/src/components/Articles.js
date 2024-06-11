@@ -52,7 +52,7 @@ function Articles() {
                     <p className="card-text">
                       {article.Content.substring(0, 80) + "...."}
                     </p>
-                    <button className='btn btn-info px-4 m-auto d-block' onClick={()=>readArticleByArticleId(article)}><MdReadMore className='fs-4'/> Read More</button>
+                    <button className='btn btn-success px-4 m-auto d-block' onClick={()=>readArticleByArticleId(article)}><MdReadMore className='fs-4'/> Read More</button>
                   </div>
                   <div className="card-footer d-flex justify-content-between">
                     <small className="text-body-secondary">
