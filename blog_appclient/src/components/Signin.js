@@ -156,12 +156,16 @@ function Signin() {
 
         <div className="d-flex justify-content-center w-100">
             <button className='button-86' type="submit">Login</button>
-            </div>
+          </div>
+          
+
+        {/* <button className='btn btn-light w-100'>Sign in with Google</button> */}
+
         </form>
-        {/* <p className='fs-6 px-3 text-center '>New User! 
-            <Link to='/signup' className='px-1 link-success'>Register</Link>
-            here
-        </p> */}
+        <p className='fs-6 px-3 text-center '>New User! go to 
+            <Link to='/signup' className='px-1 link-success'>Signup</Link>
+            
+        </p>
             </div>
         </div>
 </div>
