@@ -1,0 +1,99 @@
+
+###
+POST http://localhost:4000/author-api/new-user
+Content-Type: application/json
+
+{
+    "usertype":"author",
+    "username":"Mahesh",
+    "password":"Mahesh",
+    "email":"Mahesh@gmail.com"
+}
+
+
+#### User login
+POST http://localhost:4000/author-api/login
+Content-Type: application/json
+
+{
+    "usertype":"author",
+    "username":"Mahesh",
+    "password":"Mahesh"
+}
+
+
+### add the articles
+POST http://localhost:4000/author-api/articles
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1haGVzaCIsImlhdCI6MTcxNjI3NDAzNSwiZXhwIjoxNzE2Mjc0MDU1fQ.vvG9jHa7Y_gVudogzJgnY3MZJkJuX2aovtAByYXOYIY
+Content-Type: application/json
+
+{
+    "articleId":"{{$timestamp}}",
+    "title":"Fundamentals in JS",
+    "username":"Mahesh",
+    "category":"Programming",
+    "content":"JavaScript (JS) is a cross-platform, object-oriented programming language used by developers to make web pages interactive. It allows developers to create dynamically updating content, use animations, pop-up menus, clickable buttons, control multimedia, etc.",
+    "dateOfCreation":"{{$datetime iso8601}}",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "comments":[],
+    "status":true
+}
+
+### View all the articles of author
+GET http://localhost:4000/author-api/articles/Mahesh
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1haGVzaCIsImlhdCI6MTcxNjI3NDAzNSwiZXhwIjoxNzE2Mjc0MDU1fQ.vvG9jHa7Y_gVudogzJgnY3MZJkJuX2aovtAByYXOYIY
+
+
+#### update the article
+PUT http://localhost:4000/author-api/articles
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1haGVzaCIsImlhdCI6MTcxMDMyOTA2NiwiZXhwIjoxNzEwMzI5MDg2fQ.2wHS-QcBd729nbKlLNtl62YxSouqadnbzJ0hiB0ZGXo
+Content-Type: application/json
+
+{
+    "articleId":"1710251746",
+    "title":"Fundamentals in JS",
+    "username":"Mahesh",
+    "category":"Programming",
+    "content":"JavaScript (JS) is a cross-platform, object-oriented programming language used by developers to make web pages interactive. ",
+    "dateOfCreation":"2024-03-12T13:55:46.626Z",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "comments":[],
+    "status":true
+}
+
+
+### soft delete the article
+PUT http://localhost:4000/author-api/articles/1710251746
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1haGVzaCIsImlhdCI6MTcxMDMyOTA2NiwiZXhwIjoxNzEwMzI5MDg2fQ.2wHS-QcBd729nbKlLNtl62YxSouqadnbzJ0hiB0ZGXo
+Content-Type: application/json
+
+{
+    "articleId":"1710251746",
+    "title":"Fundamentals in JS",
+    "username":"Mahesh",
+    "category":"Programming",
+    "content":"JavaScript (JS) is a cross-platform, object-oriented programming language used by developers to make web pages interactive. ",
+    "dateOfCreation":"2024-03-12T13:55:46.626Z",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "comments":[],
+    "status":true
+}
+
+//get all authors
+###
+GET http://localhost:4000/author-api/authors
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1haGVzaCIsImlhdCI6MTcxNjg4MTA3MCwiZXhwIjoxNzE2OTY3NDcwfQ.nkEs0T-FO_Q0MPDs5I5AUKV3-HWz_jXv2Svay69sHnE
+
+
+
+###
+POST http://localhost:4000/author-api/authors/Keerthan
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1haGVzaCIsImlhdCI6MTcxNjg4MTA3MCwiZXhwIjoxNzE2OTY3NDcwfQ.nkEs0T-FO_Q0MPDs5I5AUKV3-HWz_jXv2Svay69sHnE
+Content-Type: application/json
+
+{
+    "username":"ravi",
+    "followStatus":true
+
+}
+

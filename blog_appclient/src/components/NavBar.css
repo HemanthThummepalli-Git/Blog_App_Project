@@ -1,0 +1,48 @@
+/* .ab {
+    padding: 7px ;
+    color: #02b502;
+    letter-spacing: 2px;
+    border-radius: 5px;
+}
+
+/*creating animation effect*/
+/* .ab:hover {
+    color: #111;
+    background: #02b502;
+    box-shadow: 0 0 50px #02b502;
+}  */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+hr {
+    height: 10px;
+    border: 0;
+    box-shadow: 0 10px 15px -10px #ffffff inset;
+}
+
+.ab {
+    padding: 8px;
+    border-radius: 5px;
+    transition: 0.5s;
+    letter-spacing: 2px;
+    margin-right: 15px;
+    color: #ffffff; /* Default text color is black */
+    
+}
+
+.ab:hover {
+    background: #4e4e4e; /* Background color on hover */
+    color: #ffffff; /* Text color on hover */
+    box-shadow: 0 0 5px #4e4e4e,
+        0 0 25px #4e4e4e,
+        0 0 50px #4e4e4e,
+        0 0 200px #4e4e4e;
+}
+
+.ab:nth-child(1) {
+    color: #4e4e4e; /* Ensuring the initial color is black */
+}
+
+.ab:nth-child(1):hover {
+    color: #ccff5f; 
+}

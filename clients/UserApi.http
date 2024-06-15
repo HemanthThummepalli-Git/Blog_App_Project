@@ -1,0 +1,71 @@
+
+###
+POST http://localhost:4000/user-api/new-user
+Content-Type: application/json
+
+{
+    "usertype":"user",
+    "username":"Hemanth",
+    "password":"Hemanth",
+    "email":"Hemanth@gmail.com"
+}
+
+
+#### User login
+POST http://localhost:4000/user-api/login
+Content-Type: application/json
+
+{
+    "usertype":"user",
+    "username":"Hemanth",
+    "password":"Hemanth"
+}
+
+### Get all the authors articles
+
+GET http://localhost:4000/user-api/articles
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkhlbWFudGgiLCJpYXQiOjE3MTYyNzQwMDcsImV4cCI6MTcxNjI3NDAyN30.dCPlKJ39TsRRCX1z6elznWWu-Tn4Z7RKJf3YMxKxEuA
+
+
+### Write the comment
+POST http://localhost:4000/user-api/comment/1716491219609
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkhlbWFudGgiLCJpYXQiOjE3MTY3OTU2NTQsImV4cCI6MTcxNjg4MjA1NH0.VY3OmlNmXeO0ovSPLZBmT3s5GaBMZ5RqJkpSPchUlvA
+Content-Type: application/json
+
+{
+    "username":"Hemanth",
+    "comment":"Comment is informative for present generation"
+}
+
+
+###
+PUT http://localhost:4000/user-api/views
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkhlbWFudGgiLCJpYXQiOjE3MTcwNDQxMzQsImV4cCI6MTcxNzEzMDUzNH0.wmrqSZnz-WKZY5w7BJPNXG5dhcqxRvolxSGh0eV1SN0
+Content-Type: application/json
+
+{
+    "title": "Narayana School Life",
+    "category": "Technology",
+    "dateOfCreation": "2024-05-29T05:07:27.584Z",
+    "dateOfModification": "2024-05-29T05:07:27.584Z",
+    "articleId": 1716959247584,
+    "username": "Keerthan",
+    "comments": [],
+    "status": true,
+    "views": 0
+}
+
+###
+PUT http://localhost:4000/user-api/comment/1716818350406/ravi
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkhlbWFudGgiLCJpYXQiOjE3MTcxMzg4OTMsImV4cCI6MTcxNzIyNTI5M30.GePCDuX2sQ99eZEkJ0pJnqSjy-Ru8hpzFGVT8zJMoUw
+Content-Type: application/json
+
+{
+    "reply":"Thanks for your feedback",
+    "replyStatus":false,
+    "username":"ravi",
+    "dateOfReply":""
+}  
+
+
+
