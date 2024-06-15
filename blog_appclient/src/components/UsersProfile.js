@@ -32,8 +32,8 @@ function UsersProfile() {
   return (
     <div>
       <div className='d-flex justify-content-around m-3'>
-      <NavLink className="fs-4 text-decoration-none ab text-center" to={`/usersprofile/articles`} ><MdArticle className='fs-3 m-0' /> View Articles</NavLink>
-      <NavLink to={"/usersprofile/followauthors"} state={{ mystate: Authors }} className="fs-4  text-decoration-none ab text-center"><FaUserGraduate className='fs-2 m-0'/> Authors</NavLink>
+      <NavLink className="fs-4 text-decoration-none ab text-center text-black" to={`/usersprofile/articles`} ><MdArticle className='fs-3 m-0' /> View Articles</NavLink>
+      <NavLink to={"/usersprofile/followauthors"} state={{ mystate: Authors }} className="fs-4  text-decoration-none ab text-center text-black"><FaUserGraduate className='fs-2 m-0'/> Authors</NavLink>
       </div>
       <Outlet/>
     </div>

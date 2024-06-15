@@ -5,6 +5,18 @@ const app=exp()
 //import the dotenv
 require('dotenv').config() //process.env
 
+let port=process.env.PORT || 5000
+//import cors
+const cors=require('cors')
+
+
+app.use(cors({
+    origin:"http://localhost:4000",
+    methods:"GET,POST,PUT,DELETE",
+    credentials:true
+}))
+
+
 //import the userapp 
 let UserApp=require('./APIs/UserApi.js')
 //import the AuthorApp 
@@ -65,6 +77,6 @@ app.use((err,req,res,next)=>{
     res.send({erroremessage:err.message})
 })
 
-let port=process.env.PORT || 5000
+
 //assign the port number to the server
 app.listen(port,()=>{console.log(`Http server is running in  ${port}`)})
